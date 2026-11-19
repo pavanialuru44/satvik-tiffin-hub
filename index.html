@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annapurna Pure Veg Tiffins | Homestyle Daily Vegetarian Meals</title>
+  <meta name="description" content="100% Pure Vegetarian homestyle tiffin service. Fresh, healthy, hygienic breakfast, lunch and dinner tiffins delivered right to your doorstep.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-bar" aria-label="Announcement">
+    <div class="top-bar-inner">
+      <div class="top-bar-left">
+        <span class="pure-veg-tag">
+          <span class="veg-badge-mini"><span class="veg-dot-mini"></span></span>
+          100% PURE VEGETARIAN &amp; SATVIK KITCHEN
+        </span>
+        <span class="divider">•</span>
+        <span class="top-highlight">🌿 Prepared with Pure Cow Desi Ghee &amp; Cold-Pressed Oils</span>
+      </div>
+      <div class="top-bar-right">
+        <span>📞 Tiffin Helpline: <strong>+91 98765 43210</strong></span>
+        <span class="divider">•</span>
+        <span class="badge-free">FREE Delivery on ₹199+</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="brand-logo" aria-label="Annapurna Veg Tiffins Home">
+        <div class="logo-icon">🍲</div>
+        <div class="logo-text">
+          <span class="brand-title">Annapurna</span>
+          <span class="brand-subtitle">PURE VEG TIFFIN SERVICE</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#menu" class="nav-link active">Menu</a>
+        <a href="javascript:void(0)" class="nav-link" onclick="openSubscriptionModal()">Meal Plans 📅</a>
+        <a href="#why-us" class="nav-link">Why Us</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#checkout-section" class="nav-link">Checkout</a>
+        <button type="button" class="nav-orders-btn" onclick="openOrderHistoryModal()" title="View Order History">
+          📜 My Orders (<span id="ordersCountBadge">0</span>)
+        </button>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Pure Veg Assurance Pill -->
+        <div class="veg-status-pill" title="Only 100% Pure Vegetarian Food Served">
+          <span class="veg-icon-box"><span class="veg-circle"></span></span>
+          <span>100% Pure Veg</span>
+        </div>
+
+        <!-- Kitchen Live Dashboard Button -->
+        <button class="settings-btn" onclick="openKitchenDashboardModal()" title="Live Kitchen & Orders Dashboard" aria-label="Kitchen Dashboard">
+          👨‍🍳
+        </button>
+
+        <!-- Shop Settings Button -->
+        <button class="settings-btn" onclick="openShopSettingsModal()" title="Shop UPI & Store Settings" aria-label="Shop Settings">
+          ⚙️
+        </button>
+
+        <!-- Cart Trigger Button -->
+        <button class="cart-btn" id="openCartBtn" onclick="toggleCartDrawer(true)" aria-label="View Shopping Cart">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-label">Cart</span>
+          <span class="cart-badge" id="headerCartCount">0</span>
+          <span class="cart-total-badge" id="headerCartTotal">₹0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <span class="veg-icon-box"><span class="veg-circle"></span></span>
+          <span>Ghar Jaisa Khana • No Preservatives • Daily Changing Menu</span>
+        </div>
+        <h1 class="hero-heading">Hot &amp; Wholesome <span class="text-highlight">Pure Veg Tiffins</span>, Delivered with Love.</h1>
+        <p class="hero-desc">Enjoy authentic homestyle North &amp; South Indian vegetarian tiffins freshly cooked every morning and evening. From fluffy idlis and butter dosas to royal dal-paneer thalis, wholesome meals are just a click away.</p>
+        
+        <div class="hero-cta-group">
+          <a href="#menu" class="btn btn-primary btn-lg">Explore Today's Menu ↓</a>
+          <button class="btn btn-secondary btn-lg" onclick="scrollToElement('checkout-section')">Quick Order &amp; Pay 💳</button>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="hero-perks">
+          <div class="perk-item">
+            <span class="perk-icon">🥘</span>
+            <div><strong>Freshly Made</strong><span>Cooked right after order</span></div>
+          </div>
+          <div class="perk-item">
+            <span class="perk-icon">🫙</span>
+            <div><strong>Pure Desi Ghee</strong><span>No palm oil or chemicals</span></div>
+          </div>
+          <div class="perk-item">
+            <span class="perk-icon">⚡</span>
+            <div><strong>30-40 Mins</strong><span>Hot &amp; fast doorstep delivery</span></div>
+          </div>
+          <div class="perk-item">
+            <span class="perk-icon">🍱</span>
+            <div><strong>Eco Packaging</strong><span>Spill-proof food-grade boxes</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-banner-card">
+        <div class="special-card-badge">⭐ TODAY'S SPECIAL MEAL</div>
+        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=700&q=80" 
+             alt="Royal Veg Thali Tiffin" 
+             class="hero-card-img"
+             onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'><rect width=\'100%25\' height=\'100%25\' fill=\'%2314532d\'/><text x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'28\' fill=\'%23ffffff\'>🍱 Royal Veg Thali</text></svg>';">
+        <div class="hero-card-body">
+          <div class="hero-card-meta">
+            <span class="veg-badge"><span class="veg-dot"></span></span>
+            <span class="meal-tag">Deluxe Lunch &amp; Dinner Thali</span>
+            <span class="rating">★ 4.9 (1,280+)</span>
+          </div>
+          <h3>Royal Maharaja Veg Thali</h3>
+          <p>4 Ghee Phulkas + Paneer Lababdar + Dal Tadka + Seasonal Veg + Basmati Jeera Rice + Boondi Raita + Gulab Jamun.</p>
+          <div class="hero-card-foot">
+            <div class="price-wrap">
+              <span class="price-old">₹180</span>
+              <span class="price-curr">₹150</span>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="quickAddSpecial(5)">+ Add to Tiffin</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promo Ribbon -->
+  <section class="promo-ribbon">
+    <div class="promo-ribbon-inner">
+      <div class="promo-box">
+        <span class="promo-code-badge">VEG10</span>
+        <span>Use code <strong>VEG10</strong> for flat 10% OFF on all tiffins!</span>
+      </div>
+      <div class="promo-box">
+        <span class="promo-code-badge">FREEDEL</span>
+        <span>Use code <strong>FREEDEL</strong> for Free Delivery on orders over ₹150!</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main App Container -->
+  <main class="main-content" id="main-content">
+    
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+      <div class="section-header">
+        <div>
+          <span class="section-eyebrow">🌱 100% VEGETARIAN MENU</span>
+          <h2 class="section-title">Explore Our Pure Veg Tiffin Menu</h2>
+          <p class="section-subtitle">Wholesome homestyle breakfasts, daily lunch boxes, deluxe thalis, and healthy diet bowls.</p>
+        </div>
+        
+        <!-- Live Search Box -->
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" placeholder="Search dosa, thali, paneer, khichdi..." oninput="handleSearch(this.value)" aria-label="Search Menu Items">
+          <button class="clear-search" id="clearSearchBtn" onclick="clearSearch()" style="display:none;" aria-label="Clear Search">×</button>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs" role="tablist">
+        <button class="filter-btn active" data-category="all" onclick="filterCategory('all', this)" role="tab" aria-selected="true">
+          🍽️ All Items (<span id="countAll">0</span>)
+        </button>
+        <button class="filter-btn" data-category="breakfast" onclick="filterCategory('breakfast', this)" role="tab" aria-selected="false">
+          🌅 Morning Breakfast (<span id="countBreakfast">0</span>)
+        </button>
+        <button class="filter-btn" data-category="thali" onclick="filterCategory('thali', this)" role="tab" aria-selected="false">
+          🍱 Lunch &amp; Dinner Thalis (<span id="countThali">0</span>)
+        </button>
+        <button class="filter-btn" data-category="healthy" onclick="filterCategory('healthy', this)" role="tab" aria-selected="false">
+          🥗 Healthy &amp; Diet Bowls (<span id="countHealthy">0</span>)
+        </button>
+        <button class="filter-btn" data-category="sides" onclick="filterCategory('sides', this)" role="tab" aria-selected="false">
+          🥤 Sides &amp; Drinks (<span id="countSides">0</span>)
+        </button>
+      </div>
+
+      <!-- Dietary Quick Filter Chips -->
+      <div class="dietary-filter-bar">
+        <span class="dietary-label">Dietary Filters:</span>
+        <button type="button" class="diet-chip active" data-diet="all" onclick="filterDietary('all', this)">All Pure Veg</button>
+        <button type="button" class="diet-chip" data-diet="jain" onclick="filterDietary('jain', this)">🧅❌ Jain Satvik (No Onion/Garlic)</button>
+        <button type="button" class="diet-chip" data-diet="protein" onclick="filterDietary('protein', this)">💪 High Protein</button>
+        <button type="button" class="diet-chip" data-diet="bestseller" onclick="filterDietary('bestseller', this)">⭐ Bestsellers</button>
+      </div>
+
+      <!-- Menu Items Grid -->
+      <div class="menu-grid" id="menuGrid" aria-live="polite">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+      <div class="no-results" id="noResults" style="display: none;">
+        <span class="no-results-icon">🥦</span>
+        <h3>No matching vegetarian dishes found</h3>
+        <p>Try searching for items like "Idli", "Thali", "Paneer", or "Khichdi".</p>
+        <button class="btn btn-secondary btn-sm" onclick="clearSearch()">View Full Menu</button>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features-section" id="why-us">
+      <div class="section-header text-center">
+        <span class="section-eyebrow">OUR COMMITMENT</span>
+        <h2 class="section-title">Why Annapurna Tiffins Are Special</h2>
+        <p class="section-subtitle">We don't just cook food; we prepare meals like your mother does at home.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-box">🥗</div>
+          <h3>100% Pure Veg &amp; Satvik</h3>
+          <p>Strictly vegetarian kitchen with zero non-veg contamination. Pure vegetarian oils and Jain options available on request.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-box">🧈</div>
+          <h3>Desi Cow Ghee &amp; Fresh Spices</h3>
+          <p>Every tadka is prepared with pure aromatic cow ghee and freshly hand-ground spices for delicious digestion.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-box">📦</div>
+          <h3>Hygienic Thermal Packaging</h3>
+          <p>Delivered in insulated, food-grade 3-tier containers so your rotis stay super soft and dal arrives piping hot.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-box">⏱️</div>
+          <h3>Punctual Doorstep Delivery</h3>
+          <p>Select your morning or evening delivery slot and receive your tiffin right on time, every single day.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Monthly / Weekly Meal Plans Info -->
+    <section class="plans-section" id="plans">
+      <div class="plans-banner">
+        <div class="plans-content">
+          <span class="plans-tag">MONTHLY TIFFIN SUBSCRIPTIONS</span>
+          <h2>Need Daily Lunch or Dinner Tiffin?</h2>
+          <p>Save up to 25% with our hassle-free monthly subscriptions! Pause, cancel, or change meal preferences anytime.</p>
+          <div class="plans-features">
+            <span>✓ Daily rotating menu</span>
+            <span>✓ Flexible pause options</span>
+            <span>✓ Zero delivery charges</span>
+          </div>
+          <button class="btn btn-secondary btn-lg" onclick="openWhatsAppSubscription()">Inquire on WhatsApp 💬</button>
+        </div>
+        <div class="plans-pricing-card">
+          <div class="plan-badge">MOST POPULAR</div>
+          <h3>Executive Monthly Veg Box</h3>
+          <div class="plan-price">₹2,899<span> / month</span></div>
+          <p class="plan-note">26 Working Days (Lunch or Dinner)</p>
+          <ul class="plan-list">
+            <li>4 Ghee Phulkas / Rotis</li>
+            <li>Homestyle Dal / Kadhi</li>
+            <li>Special Paneer / Veg Curry</li>
+            <li>Steamed Rice &amp; Raita</li>
+            <li>Fresh Salad &amp; Pickle</li>
+          </ul>
+          <button class="btn btn-primary btn-block" onclick="openSubscriptionModal()">Subscribe This Plan</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Unified Order & Checkout Section -->
+    <section class="checkout-wrapper" id="checkout-section">
+      <div class="section-header">
+        <span class="section-eyebrow">READY TO EAT?</span>
+        <h2 class="section-title">Review Your Cart &amp; Place Order</h2>
+        <p class="section-subtitle">Confirm your vegetarian tiffin selections, provide delivery details, and pick your preferred payment mode.</p>
+      </div>
+
+      <div class="checkout-grid">
+        
+        <!-- Left Column: Cart Review & Price Breakdown -->
+        <div class="checkout-panel cart-review-panel">
+          <div class="panel-header">
+            <h3>🛒 Your Selected Tiffins (<span id="cartTotalItemsCount">0</span>)</h3>
+            <button class="btn-text-danger" onclick="clearCart()" id="clearCartBtn" style="display:none;">Clear Cart</button>
+          </div>
+
+          <!-- Cart items list -->
+          <div class="cart-items-container" id="cartItemsList">
+            <div class="empty-cart-state">
+              <span class="empty-icon">🍱</span>
+              <p><strong>Your tiffin box is empty!</strong></p>
+              <span>Browse our delicious vegetarian menu above and click <em>+ Add</em> to get started.</span>
+              <a href="#menu" class="btn btn-secondary btn-sm" style="margin-top: 14px;">Browse Veg Dishes ↑</a>
+            </div>
+          </div>
+
+          <!-- Special Cooking Note & Cutlery -->
+          <div class="cart-extras" id="cartExtras" style="display:none;">
+            <div class="extra-field">
+              <label for="cookingNotes">📝 Special Cooking Instructions (Optional):</label>
+              <input type="text" id="cookingNotes" placeholder="e.g. Less spicy, Jain preparation (no onion/garlic), extra chutney">
+            </div>
+            <div class="checkbox-field">
+              <label>
+                <input type="checkbox" id="cutleryOption" checked>
+                <span>Include eco-friendly biodegradable wooden spoons &amp; napkins</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Coupon Code Box -->
+          <div class="coupon-box" id="couponBox" style="display:none;">
+            <label for="couponInput">🏷️ Have a Coupon Code?</label>
+            <div class="coupon-input-group">
+              <input type="text" id="couponInput" placeholder="Try VEG10 or FREEDEL">
+              <button class="btn btn-secondary" type="button" onclick="applyCoupon()">Apply</button>
+            </div>
+            <div class="coupon-message" id="couponMessage"></div>
+          </div>
+
+          <!-- Bill Summary Breakdown -->
+          <div class="bill-summary" id="billSummary" style="display:none;">
+            <h4>Bill Details</h4>
+            <div class="bill-row">
+              <span>Item Total</span>
+              <span id="billSubtotal">₹0</span>
+            </div>
+            <div class="bill-row">
+              <span>Delivery Partner Fee</span>
+              <span id="billDelivery">₹30</span>
+            </div>
+            <div class="bill-row text-success" id="deliveryDiscountRow" style="display:none;">
+              <span>Delivery Discount</span>
+              <span id="billDeliveryDiscount">-₹30</span>
+            </div>
+            <div class="bill-row text-success" id="couponDiscountRow" style="display:none;">
+              <span>Promo Discount (<span id="appliedCouponTag"></span>)</span>
+              <span id="billCouponDiscount">-₹0</span>
+            </div>
+            <div class="bill-row">
+              <span>Govt Taxes &amp; Packaging (5% GST)</span>
+              <span id="billTaxes">₹0</span>
+            </div>
+            <div class="bill-divider"></div>
+            <div class="bill-row bill-grand-total">
+              <div>
+                <strong>Grand Total</strong>
+                <small class="tax-note">Inclusive of all taxes</small>
+              </div>
+              <strong class="total-amount" id="billGrandTotal">₹0</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Delivery Details & Payment Method -->
+        <div class="checkout-panel payment-panel">
+          <form id="orderForm" onsubmit="handlePlaceOrder(event)">
+            
+            <div class="form-step">
+              <div class="step-badge">1</div>
+              <h3>Delivery Information</h3>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="custName">Full Name <span class="required">*</span></label>
+                <input type="text" id="custName" required placeholder="e.g. Ramesh Sharma">
+              </div>
+
+              <div class="form-group">
+                <label for="custPhone">Mobile Number <span class="required">*</span></label>
+                <input type="tel" id="custPhone" required pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number" inputmode="numeric">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="custAddress">Complete Delivery Address <span class="required">*</span></label>
+              <textarea id="custAddress" required rows="2" placeholder="Flat / House No., Apartment name, Street, Area"></textarea>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="custPincode">Pincode <span class="required">*</span></label>
+                <input type="text" id="custPincode" required pattern="[0-9]{6}" maxlength="6" placeholder="e.g. 560001" inputmode="numeric">
+              </div>
+
+              <div class="form-group">
+                <label for="custSlot">Preferred Delivery Slot <span class="required">*</span></label>
+                <select id="custSlot" required>
+                  <option value="Immediate">⚡ Express Now (30 - 45 mins)</option>
+                  <option value="Breakfast (7:30 AM - 9:00 AM)">🌅 Breakfast (7:30 AM - 9:00 AM)</option>
+                  <option value="Lunch (12:30 PM - 2:00 PM)">☀️ Lunch (12:30 PM - 2:00 PM)</option>
+                  <option value="Dinner (7:30 PM - 9:00 PM)">🌙 Dinner (7:30 PM - 9:00 PM)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-step" style="margin-top: 24px;">
+              <div class="step-badge">2</div>
+              <h3>Choose Payment Method</h3>
+            </div>
+
+            <!-- Payment Methods Tabs -->
+            <div class="payment-tabs" role="tablist">
+              <label class="payment-tab-item active" onclick="selectPaymentTab('upi', this)">
+                <input type="radio" name="paymentMethod" value="UPI" checked>
+                <span class="pay-icon">📱</span>
+                <span class="pay-title">UPI / QR</span>
+                <span class="pay-sub">GPay, PhonePe, Paytm</span>
+              </label>
+
+              <label class="payment-tab-item" onclick="selectPaymentTab('cod', this)">
+                <input type="radio" name="paymentMethod" value="COD">
+                <span class="pay-icon">💵</span>
+                <span class="pay-title">Cash on Delivery</span>
+                <span class="pay-sub">Pay at doorstep</span>
+              </label>
+
+              <label class="payment-tab-item" onclick="selectPaymentTab('card', this)">
+                <input type="radio" name="paymentMethod" value="CARD">
+                <span class="pay-icon">💳</span>
+                <span class="pay-title">Cards</span>
+                <span class="pay-sub">Credit / Debit</span>
+              </label>
+
+              <label class="payment-tab-item" onclick="selectPaymentTab('netbanking', this)">
+                <input type="radio" name="paymentMethod" value="NETBANKING">
+                <span class="pay-icon">🏦</span>
+                <span class="pay-title">Net Banking</span>
+                <span class="pay-sub">All Indian Banks</span>
+              </label>
+            </div>
+
+            <!-- Dynamic Payment Details Panels -->
+            <div class="payment-details-box">
+              
+              <!-- Tab 1: UPI & QR Code Panel -->
+              <div class="payment-panel-content" id="panel-upi">
+                <div class="upi-box">
+                  <div class="upi-qr-section">
+                    <div class="qr-frame">
+                      <div id="upiQrCodeContainer" class="qr-canvas-holder">
+                        <!-- Dynamic QR SVG rendered here -->
+                      </div>
+                      <span class="qr-caption">Scan with Any UPI App</span>
+                    </div>
+
+                    <div class="upi-instructions">
+                      <div class="upi-shop-id">
+                        <span>Shop UPI ID:</span>
+                        <div class="upi-badge-code">
+                          <code id="shopUpiIdText">annapurna.veg@okaxis</code>
+                          <button type="button" class="btn-copy" onclick="copyUpiId()" title="Copy UPI ID">📋 Copy</button>
+                        </div>
+                      </div>
+
+                      <p class="upi-note">Supported UPI Apps:</p>
+                      <div class="upi-apps-badges">
+                        <span class="upi-badge">Google Pay</span>
+                        <span class="upi-badge">PhonePe</span>
+                        <span class="upi-badge">Paytm</span>
+                        <span class="upi-badge">BHIM</span>
+                        <span class="upi-badge">CRED</span>
+                      </div>
+
+                      <div class="upi-deep-link-wrap">
+                        <a id="upiPayLink" href="#" class="btn btn-outline btn-sm">Direct Pay via Mobile UPI App ↗</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="upi-verify-input">
+                    <label for="customerUpiId">Or Enter Your UPI ID (VPA):</label>
+                    <div class="input-with-button">
+                      <input type="text" id="customerUpiId" placeholder="e.g. mobile@okaxis or name@paytm">
+                      <button type="button" class="btn btn-secondary btn-sm" onclick="verifyCustomerUpi()">Verify</button>
+                    </div>
+                    <small class="form-hint" id="upiVerifyHint">You will approve the payment request on your mobile app.</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab 2: Cash on Delivery Panel -->
+              <div class="payment-panel-content" id="panel-cod" style="display: none;">
+                <div class="cod-box">
+                  <div class="cod-icon">💵</div>
+                  <h4>Pay Cash or Scan QR Upon Delivery</h4>
+                  <p>Keep exact change ready when your delivery partner arrives. You can also pay via Google Pay, PhonePe, or Paytm QR directly to the delivery person.</p>
+                  <div class="cod-perk">✓ Zero extra COD handling fee</div>
+                </div>
+              </div>
+
+              <!-- Tab 3: Credit / Debit Card Panel -->
+              <div class="payment-panel-content" id="panel-card" style="display: none;">
+                <div class="card-form-box">
+                  <div class="card-visual">
+                    <div class="card-chip"></div>
+                    <div class="card-number-display" id="cardNumPreview">•••• •••• •••• ••••</div>
+                    <div class="card-bottom">
+                      <div>
+                        <small>CARDHOLDER</small>
+                        <div id="cardHolderPreview">YOUR NAME</div>
+                      </div>
+                      <div>
+                        <small>EXPIRES</small>
+                        <div id="cardExpiryPreview">MM/YY</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" maxlength="19" placeholder="4532 •••• •••• ••••" inputmode="numeric" oninput="formatCardNumber(this)">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cardName">Cardholder Name</label>
+                    <input type="text" id="cardName" placeholder="Name as printed on card" oninput="updateCardName(this.value)">
+                  </div>
+
+                  <div class="form-grid">
+                    <div class="form-group">
+                      <label for="cardExpiry">Expiry Date</label>
+                      <input type="text" id="cardExpiry" maxlength="5" placeholder="MM/YY" oninput="formatCardExpiry(this)">
+                    </div>
+                    <div class="form-group">
+                      <label for="cardCvv">CVV</label>
+                      <input type="password" id="cardCvv" maxlength="4" placeholder="123" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="secure-badge">🔒 256-Bit Bank Grade SSL Encrypted</div>
+                </div>
+              </div>
+
+              <!-- Tab 4: Net Banking Panel -->
+              <div class="payment-panel-content" id="panel-netbanking" style="display: none;">
+                <div class="netbanking-box">
+                  <p>Select your preferred Indian bank:</p>
+                  <div class="bank-grid">
+                    <label class="bank-pill">
+                      <input type="radio" name="bankOption" value="SBI" checked>
+                      <span>State Bank of India</span>
+                    </label>
+                    <label class="bank-pill">
+                      <input type="radio" name="bankOption" value="HDFC">
+                      <span>HDFC Bank</span>
+                    </label>
+                    <label class="bank-pill">
+                      <input type="radio" name="bankOption" value="ICICI">
+                      <span>ICICI Bank</span>
+                    </label>
+                    <label class="bank-pill">
+                      <input type="radio" name="bankOption" value="AXIS">
+                      <span>Axis Bank</span>
+                    </label>
+                    <label class="bank-pill">
+                      <input type="radio" name="bankOption" value="KOTAK">
+                      <span>Kotak Mahindra</span>
+                    </label>
+                    <label class="bank-pill">
+                      <input type="radio" name="bankOption" value="PNB">
+                      <span>Punjab National Bank</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Submit Place Order Button -->
+            <button type="submit" class="btn btn-primary btn-block btn-place-order" id="placeOrderSubmitBtn">
+              <span class="btn-lock-icon">🔒</span>
+              <span>Confirm &amp; Place Veg Tiffin Order (<span id="payBtnAmount">₹0</span>)</span>
+            </button>
+            <p class="terms-note">By placing your order, you agree to receive delivery updates via SMS and WhatsApp.</p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="reviews-section" id="reviews">
+      <div class="section-header text-center">
+        <span class="section-eyebrow">CUSTOMER PRAISE</span>
+        <h2 class="section-title">Loved by Thousands of Foodies</h2>
+        <p class="section-subtitle">Real feedback from daily office goers, families, and students.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"The Royal Veg Thali reminds me of my mom's cooking back in Jaipur. The phulkas are soft, the dal is not overly oily, and the paneer is always fresh."</p>
+          <div class="review-author">
+            <div class="author-avatar">AM</div>
+            <div>
+              <strong>Ananya Mishra</strong>
+              <small>IT Professional, Bengaluru</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Best breakfast tiffins in town! The Idli Vada combo arrives hot with fresh coconut chutney by 8:00 AM sharp every morning. UPI payment is super smooth."</p>
+          <div class="review-author">
+            <div class="author-avatar">VK</div>
+            <div>
+              <strong>Vikram Kulkarni</strong>
+              <small>Daily Subscriber, Pune</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Finding 100% pure vegetarian food without onions and garlic (Jain style) used to be tough until I tried Annapurna. Clean packaging and authentic satvik taste."</p>
+          <div class="review-author">
+            <div class="author-avatar">PS</div>
+            <div>
+              <strong>Pooja Shah</strong>
+              <small>Chartered Accountant, Ahmedabad</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Slide-Over Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay" onclick="toggleCartDrawer(false)"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart Drawer">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <h3>🛒 Your Veg Tiffins</h3>
+        <span class="drawer-badge" id="drawerItemCount">0 items</span>
+      </div>
+      <button class="drawer-close-btn" onclick="toggleCartDrawer(false)" aria-label="Close Cart Drawer">✕</button>
+    </div>
+
+    <div class="drawer-body" id="drawerBody">
+      <!-- Injected by script.js -->
+    </div>
+
+    <div class="drawer-footer" id="drawerFooter" style="display: none;">
+      <div class="drawer-subtotal">
+        <span>To Pay:</span>
+        <strong id="drawerTotalAmount">₹0</strong>
+      </div>
+      <button class="btn btn-primary btn-block" onclick="proceedToCheckoutFromDrawer()">
+        Proceed to Checkout 💳
+      </button>
+    </div>
+  </aside>
+
+  <!-- Order Processing Overlay Modal -->
+  <div class="processing-modal" id="processingModal">
+    <div class="processing-content">
+      <div class="spinner-pot">🍲</div>
+      <h3>Processing Your Pure Veg Order...</h3>
+      <p id="processingStatusText">Contacting kitchen &amp; verifying payment details...</p>
+    </div>
+  </div>
+
+  <!-- Order Success & Receipt Modal -->
+  <div class="order-modal-backdrop" id="orderSuccessModal">
+    <div class="order-receipt-card" id="printableReceipt">
+      <button class="modal-close-btn" onclick="closeOrderModal()" aria-label="Close Receipt Modal">✕</button>
+      
+      <div class="receipt-header">
+        <div class="receipt-success-icon">🎉</div>
+        <h2>Order Confirmed!</h2>
+        <p class="receipt-subtitle">Thank you! Your pure vegetarian tiffin is now being freshly prepared.</p>
+        <div class="order-id-badge" id="receiptOrderId">#VT-2026-0000</div>
+      </div>
+
+      <!-- Live Order Tracker -->
+      <div class="order-tracker">
+        <div class="tracker-step active done">
+          <div class="step-circle">✓</div>
+          <span>Order Placed</span>
+        </div>
+        <div class="tracker-step active current">
+          <div class="step-circle">👨‍🍳</div>
+          <span>Kitchen Preparing</span>
+        </div>
+        <div class="tracker-step">
+          <div class="step-circle">🛵</div>
+          <span>Out for Delivery</span>
+        </div>
+        <div class="tracker-step">
+          <div class="step-circle">🏡</div>
+          <span>Delivered</span>
+        </div>
+      </div>
+
+      <!-- Receipt Details Summary -->
+      <div class="receipt-summary-grid">
+        <div class="summary-col">
+          <small>DELIVERY ADDRESS</small>
+          <div id="receiptCustName" class="strong">Customer Name</div>
+          <div id="receiptCustPhone">9876543210</div>
+          <div id="receiptCustAddress">Flat 101, Green Valley</div>
+          <div id="receiptCustSlot">Slot: Lunch (12:30 PM - 2:00 PM)</div>
+        </div>
+        <div class="summary-col">
+          <small>PAYMENT DETAILS</small>
+          <div id="receiptPayMethod" class="strong">UPI Payment</div>
+          <div class="payment-status-badge">PAID / CONFIRMED</div>
+          <div id="receiptOrderTime">Date: 19 Nov 2026, 10:30 AM</div>
+          <div>Estimated Arrival: <strong>35 mins</strong></div>
+        </div>
+      </div>
+
+      <!-- Receipt Items Table -->
+      <div class="receipt-items-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Veg Item</th>
+              <th>Qty</th>
+              <th>Price</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody id="receiptItemsBody">
+            <!-- Dynamically filled -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Final Bill Row -->
+      <div class="receipt-total-breakdown">
+        <div class="breakdown-line">
+          <span>Items Subtotal:</span>
+          <span id="receiptSubtotal">₹0</span>
+        </div>
+        <div class="breakdown-line">
+          <span>Delivery Fee:</span>
+          <span id="receiptDeliveryFee">₹0</span>
+        </div>
+        <div class="breakdown-line" id="receiptDiscountLine" style="display:none;">
+          <span>Discount Applied:</span>
+          <span id="receiptDiscountAmount">-₹0</span>
+        </div>
+        <div class="breakdown-line">
+          <span>Taxes (5% GST):</span>
+          <span id="receiptTax">₹0</span>
+        </div>
+        <div class="breakdown-line grand-total-line">
+          <strong>Grand Total Paid:</strong>
+          <strong id="receiptGrandTotal">₹0</strong>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="receipt-actions no-print">
+        <button class="btn btn-whatsapp" onclick="shareOrderOnWhatsApp()">
+          <span>💬</span> Share Order on WhatsApp
+        </button>
+        <button class="btn btn-secondary" onclick="window.print()">
+          <span>🖨️</span> Print / Save Receipt
+        </button>
+        <button class="btn btn-primary" onclick="startNewOrder()">
+          <span>🍱</span> Order More Tiffins
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subscription Customizer Modal -->
+  <div class="order-modal-backdrop" id="subscriptionModal">
+    <div class="order-receipt-card sub-modal-card">
+      <button class="modal-close-btn" onclick="closeSubscriptionModal()" aria-label="Close Modal">✕</button>
+      <div class="receipt-header">
+        <div class="receipt-success-icon">📅</div>
+        <h2>Customize Your Veg Tiffin Plan</h2>
+        <p class="receipt-subtitle">Fresh homestyle vegetarian lunch and dinner delivered on your schedule.</p>
+      </div>
+
+      <div class="sub-form">
+        <div class="form-group">
+          <label>1. Select Plan Duration:</label>
+          <div class="sub-choice-grid">
+            <label class="sub-pill active" onclick="selectSubDuration(7, this)">
+              <input type="radio" name="subDuration" value="7" checked>
+              <strong>7 Days Trial</strong>
+              <small>Save 10%</small>
+            </label>
+            <label class="sub-pill" onclick="selectSubDuration(14, this)">
+              <input type="radio" name="subDuration" value="14">
+              <strong>14 Days Pack</strong>
+              <small>Save 15%</small>
+            </label>
+            <label class="sub-pill" onclick="selectSubDuration(30, this)">
+              <input type="radio" name="subDuration" value="30">
+              <strong>30 Days Month</strong>
+              <small>Save 25%</small>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>2. Choose Meal Frequency:</label>
+          <div class="sub-choice-grid">
+            <label class="sub-pill active" onclick="selectSubMealType('Lunch Only', this)">
+              <input type="radio" name="subMealType" value="Lunch Only" checked>
+              <strong>☀️ Lunch Only</strong>
+              <small>12:30 PM - 2:00 PM</small>
+            </label>
+            <label class="sub-pill" onclick="selectSubMealType('Dinner Only', this)">
+              <input type="radio" name="subMealType" value="Dinner Only">
+              <strong>🌙 Dinner Only</strong>
+              <small>7:30 PM - 9:00 PM</small>
+            </label>
+            <label class="sub-pill" onclick="selectSubMealType('Lunch & Dinner', this)">
+              <input type="radio" name="subMealType" value="Lunch & Dinner">
+              <strong>🍱 Both Meals</strong>
+              <small>2 Tiffins / Day</small>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>3. Culinary Style / Preference:</label>
+          <select id="subDietStyle" class="sub-select" onchange="calculateSubPrice()">
+            <option value="North Indian Homestyle">North Indian Homestyle (Phulkas, Dal Tadka, Seasonal Sabzi, Basmati Rice)</option>
+            <option value="South Indian Delight">South Indian Combo (Rice, Sambar, Rasam, Poriyal, Curd, Kootu)</option>
+            <option value="Satvik / Jain Style">Satvik / Jain Style (No Onion, No Garlic, Desi Ghee)</option>
+            <option value="High Protein Fitness">High Protein Veg (Paneer, Sprouts, Millet Khichdi, Dal)</option>
+          </select>
+        </div>
+
+        <!-- Price Calculation Card -->
+        <div class="sub-summary-card">
+          <div class="sub-sum-row">
+            <span>Base Meal Rate:</span>
+            <span id="subBaseRate">₹110 / tiffin</span>
+          </div>
+          <div class="sub-sum-row">
+            <span>Total Tiffins:</span>
+            <span id="subTotalMeals">7 Tiffins</span>
+          </div>
+          <div class="sub-sum-row text-success">
+            <span>Subscription Discount:</span>
+            <span id="subDiscountAmount">-₹77</span>
+          </div>
+          <div class="sub-sum-divider"></div>
+          <div class="sub-sum-row sub-total-row">
+            <strong>Plan Total:</strong>
+            <strong class="total-amount" id="subFinalPrice">₹693</strong>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-block btn-lg" onclick="addSubscriptionToCart()">
+          <span>🛒</span> Add Subscription to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order History ("My Orders") Modal -->
+  <div class="order-modal-backdrop" id="orderHistoryModal">
+    <div class="order-receipt-card" style="max-width: 640px;">
+      <button class="modal-close-btn" onclick="closeOrderHistoryModal()" aria-label="Close Modal">✕</button>
+      <div class="receipt-header">
+        <div class="receipt-success-icon">📜</div>
+        <h2>Your Past Orders</h2>
+        <p class="receipt-subtitle">Track active orders or re-order your favorite pure vegetarian tiffins.</p>
+      </div>
+
+      <div class="history-list" id="orderHistoryList">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Kitchen & Orders Live Dashboard Modal -->
+  <div class="order-modal-backdrop" id="kitchenModal">
+    <div class="order-receipt-card" style="max-width: 760px;">
+      <button class="modal-close-btn" onclick="closeKitchenDashboardModal()" aria-label="Close Kitchen View">✕</button>
+      <div class="receipt-header">
+        <div class="receipt-success-icon">👨‍🍳</div>
+        <h2>Kitchen &amp; Order Dispatch Dashboard</h2>
+        <p class="receipt-subtitle">Live monitor for kitchen chefs and delivery dispatch management.</p>
+      </div>
+
+      <div class="kitchen-stats-grid">
+        <div class="k-stat-card">
+          <span class="k-stat-num" id="kStatTotalSales">₹0</span>
+          <span class="k-stat-label">Total Revenue</span>
+        </div>
+        <div class="k-stat-card">
+          <span class="k-stat-num" id="kStatTotalOrders">0</span>
+          <span class="k-stat-label">Total Orders</span>
+        </div>
+        <div class="k-stat-card">
+          <span class="k-stat-num" id="kStatActiveOrders">0</span>
+          <span class="k-stat-label">In Kitchen / Transit</span>
+        </div>
+      </div>
+
+      <div class="panel-header" style="margin-top: 20px;">
+        <h3>Live Orders Queue</h3>
+        <button class="btn btn-secondary btn-sm" onclick="renderKitchenDashboard()">🔄 Refresh</button>
+      </div>
+
+      <div class="kitchen-orders-list" id="kitchenOrdersList">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Shop Settings Modal -->
+  <div class="order-modal-backdrop" id="shopSettingsModal">
+    <div class="order-receipt-card" style="max-width: 500px;">
+      <button class="modal-close-btn" onclick="closeShopSettingsModal()" aria-label="Close Settings">✕</button>
+      <div class="receipt-header">
+        <div class="receipt-success-icon">⚙️</div>
+        <h2>Shop &amp; UPI Settings</h2>
+        <p class="receipt-subtitle">Configure your business details and shop UPI ID to accept real payments.</p>
+      </div>
+
+      <form id="shopSettingsForm" onsubmit="saveShopSettings(event)">
+        <div class="form-group">
+          <label for="cfgShopName">Shop / Kitchen Brand Name:</label>
+          <input type="text" id="cfgShopName" required value="Annapurna Pure Veg Tiffins">
+        </div>
+
+        <div class="form-group">
+          <label for="cfgUpiId">Your Real UPI ID (VPA):</label>
+          <input type="text" id="cfgUpiId" required placeholder="e.g. yourname@okaxis or business@paytm" value="annapurna.veg@okaxis">
+          <small class="form-hint">All dynamic QR codes and payment requests will use this UPI ID.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="cfgPhone">Shop WhatsApp / Mobile Phone:</label>
+          <input type="tel" id="cfgPhone" required value="919876543210">
+        </div>
+
+        <div class="form-group">
+          <label for="cfgMinFreeDelivery">Minimum Order for FREE Delivery (₹):</label>
+          <input type="number" id="cfgMinFreeDelivery" required value="199">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Save Configuration</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Floating Mobile Cart Button -->
+  <div class="floating-cart-pill" id="floatingCartPill" onclick="toggleCartDrawer(true)" style="display:none;">
+    <div class="floating-cart-left">
+      <span class="badge-count" id="floatCartCount">0</span>
+      <span>View Cart</span>
+    </div>
+    <div class="floating-cart-right">
+      <span id="floatCartTotal">₹0</span>
+      <span class="arrow-icon">→</span>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <span class="footer-logo">🍲 Annapurna</span>
+          <span class="pure-veg-tag-footer">100% PURE VEG</span>
+        </div>
+        <p>Serving hygienic, authentic homestyle vegetarian meals prepared with unadulterated cold-pressed oils, pure cow ghee, and farm-fresh organic vegetables.</p>
+        <div class="fssai-badge">FSSAI Lic. No: 11223344556677 (Pure Veg Certified)</div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tiffin Timings</h4>
+        <ul class="timing-list">
+          <li><strong>🌅 Breakfast:</strong> 7:00 AM – 10:30 AM</li>
+          <li><strong>☀️ Lunch:</strong> 11:30 AM – 3:30 PM</li>
+          <li><strong>🌙 Dinner:</strong> 7:00 PM – 10:30 PM</li>
+          <li>Open All 7 Days a Week</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kitchen &amp; Contact</h4>
+        <p>📍 Shree Annapurna Rasoi, 42 Heritage Street, Near Temple Road, City Center</p>
+        <p>📞 Phone / WhatsApp: +91 98765 43210</p>
+        <p>✉️ Email: order@annapurnavegtiffins.com</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Accepted Payment Methods</h4>
+        <div class="footer-pay-icons">
+          <span>UPI (GPay / PhonePe / Paytm)</span>
+          <span>Cash on Delivery</span>
+          <span>Visa / Mastercard / RuPay</span>
+          <span>Net Banking</span>
+        </div>
+        <p class="pure-veg-pledge">🥬 <strong>Pure Veg Pledge:</strong> No meat, poultry, fish, eggs, or non-veg food ever enters our kitchen premises.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Annapurna Pure Vegetarian Tiffin Service. All rights reserved. Made with ❤️ for Veg Food Lovers.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
